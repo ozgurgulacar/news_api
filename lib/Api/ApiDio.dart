@@ -11,7 +11,7 @@ class Apidio {
 
   Future<News?> getEveryThing({required int page}) async {
     final response = await dio.get(
-        "/everything?q=\"default\"&apiKey=${Constants().apiKey}&page=$page&pageSize=2");
+        "/everything?q=\"default\"&apiKey=${Constants().apiKey}&page=$page&pageSize=20");
 
     if (response.statusCode == HttpStatus.ok) {
       final body = response.data;

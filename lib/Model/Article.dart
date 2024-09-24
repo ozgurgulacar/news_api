@@ -22,13 +22,13 @@ class Articles {
 
   Articles.fromJson(Map<String, dynamic> json){
     source = Source.fromJson(json['source']);
-    author = null;
+    author = json['author'];
     title = json['title'];
-    description = null;
+    description = json['description'];
     url = json['url'];
-    urlToImage = null;
+    urlToImage = json['urlToImage'];
     publishedAt = json['publishedAt'];
-    content = null;
+    content = json['content'];
   }
 
   Map<String, dynamic> toJson() {
