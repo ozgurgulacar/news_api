@@ -31,9 +31,9 @@ class Apidio {
     return null;
   }
 
-  Future<News?> getSearchNews({required int page,required String query}) async {
+  Future<News?> getSearchNews({required String query}) async {
     final response = await dio.get(
-        "/everything?q=\"$query\"&apiKey=${Constants().apiKey}&page=$page&pageSize=20");
+        "/everything?q=\"$query\"&apiKey=${Constants().apiKey}&pageSize=50");
 
     if (response.statusCode == HttpStatus.ok) {
       final body = response.data;

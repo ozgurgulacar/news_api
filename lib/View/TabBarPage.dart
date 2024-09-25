@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_api/View/AllNewsPage.dart';
+import 'package:news_api/View/SearchNewsPage.dart';
 import 'package:news_api/View/TopNewsPage.dart';
 
 class TabBarPage extends StatefulWidget {
@@ -22,8 +23,11 @@ class _HomepageState extends State<TabBarPage> {
           centerTitle: true,
         ),*/
         floatingActionButton: FloatingActionButton.extended(onPressed: () {
-          
-        } , label: Icon(Icons.search)),
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => SearchNewsPage(),
+            ),
+          );        } , label: Icon(Icons.search)),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
 

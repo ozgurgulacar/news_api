@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_api/Api/ApiDio.dart';
+import 'package:news_api/View/SearchNewsPage.dart';
 import 'package:news_api/View/TabBarPage.dart';
 
 void main() {
